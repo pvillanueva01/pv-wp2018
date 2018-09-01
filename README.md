@@ -16,10 +16,10 @@ General WP Theme Development | WP Files Misc Testing
 ## Environment Dependencies
 * Homebrew 1.7.2 (https://brew.sh/) | check version: brew -v | update: brew update
 * NPM 6.4.1 (https://docs.npmjs.com/cli/update) | check version: npm -v | update: npm update -g
-* Node 8.9.4 (https://nodejs.org/) | node -v
+* Node 8.11.4 (https://nodejs.org/) | node -v
 * Yarn 1.5.1 (https://yarnpkg.com/lang/en/docs/install/) | yarn --version
-* Browser Sync 2.24.7 (https://browsersync.io/) | browser-sync -v
-* Gulp 3.9.1 
+* Browser Sync 2.24.7 (https://browsersync.io/) | browser-sync -v | npm install -g browser-sync
+* Gulp 4.0.0 
 
 ### Starter theme
 Credit to Underscores or _s <https://github.com/Automattic/_s >
