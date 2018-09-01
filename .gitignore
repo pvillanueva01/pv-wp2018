@@ -1,0 +1,40 @@
+# IDE
+.idea/*
+pv-wp2018.iml
+
+# WordPress template
+wp-config.php
+wp-sample-config.php
+wp-content/uploads/
+wp-content/plugins/
+wp-content/upgrade/
+wp-admin/
+wp-includes/
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+index.php
+
+/.htaccess
+/license.txt
+/readme.html
+
+# other default themes
+wp-content/themes/twentyfifteen/
+wp-content/themes/twentysixteen/
+
+# understrap theme
+wp-content/themes/understrap/node_modules/
+wp-content/themes/understrap/yarn.lock
+
+# uml-lib theme
+wp-content/themes/uml-lib/node_modules/
