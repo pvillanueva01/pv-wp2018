@@ -63,7 +63,7 @@ gulp.task('js', function() {
 gulp.task( 'copy-assets', function() {
     var stream =
 
-    // Copy jquery JS Core
+    // Copy jQuery JS Core
     gulp.src( paths.node + 'jquery/dist/core.js' )
         .pipe( gulp.dest( paths.dev + 'js/vendor' ) );
 
@@ -78,6 +78,14 @@ gulp.task( 'copy-assets', function() {
     // Copy all Bootstrap SCSS files
     gulp.src( paths.node + 'bootstrap/scss/**/*.scss' )
         .pipe( gulp.dest( paths.sass + 'bootstrap4' ) );
+
+    // Copy all Font Awesome Fonts
+    gulp.src( paths.node + '@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eot,svg}' )
+        .pipe( gulp.dest( paths.fonts ) );
+
+    // Copy all Font Awesome SCSS files
+    gulp.src( paths.node + '@fortawesome/fontawesome-free/scss/*.scss' )
+        .pipe( gulp.dest( paths.sass + '/fontawesome' ) );
 
     return stream;
 });
