@@ -100,5 +100,8 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 * change path for browser sync in gulpconfig.json
 * gulp copy-assets
 
-### Commands to run gulp to compile sass/js
+### Gulp Commands you will be using in the end
 * gulp
+* gulp copy-assets
+* gulp clean
+* gulp bundle
