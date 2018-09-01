@@ -94,7 +94,6 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 * Create gulp task for bundle/delete: gulp bundle
 
 
-
 ### Install dependencies after initial setup/cloning
 * npm install
 * change path for browser sync in gulpconfig.json
