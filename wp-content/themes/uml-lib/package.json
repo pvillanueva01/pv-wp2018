@@ -1,0 +1,41 @@
+{
+  "name": "uml-lib",
+  "version": "1.0.0",
+  "description": "UML Wordpress Theme Development Automation with Gulp ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pvillanueva01/libweb-wp-test.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "bootstrap",
+    "underscores"
+  ],
+  "author": "Patricia Villanueva",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pvillanueva01/libweb-wp-test/issues"
+  },
+  "homepage": "https://github.com/pvillanueva01/libweb-wp-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "es6-promise": "^4.2.4",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rtlcss": "^1.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.6",
+    "lodash": "^4.17.10"
+  }
+}

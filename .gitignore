@@ -2,9 +2,12 @@
 .idea/*
 pv-wp2018.iml
 
+# Mamp Pro
+.installedExtras
+
 # WordPress template
 wp-config.php
-wp-sample-config.php
+wp-config-sample.php
 wp-content/uploads/
 wp-content/plugins/
 wp-content/upgrade/
