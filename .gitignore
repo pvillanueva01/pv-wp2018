@@ -25,7 +25,7 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
-index.php
+/index.php
 
 /.htaccess
 /license.txt
@@ -41,3 +41,6 @@ wp-content/themes/understrap/yarn.lock
 
 # uml-lib theme
 wp-content/themes/uml-lib/node_modules/
+
+# nva wp theme -- tracked in diff repo
+wp-content/themes/nva/
