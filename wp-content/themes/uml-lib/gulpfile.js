@@ -44,17 +44,50 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(paths.root));        // Output RTL stylesheets (rtl.css) on theme root
 });
 
+// Check JS custom
+// Run:
+// gulp checkjs
+gulp.task('checkjs', function() {
+    var devscript = [
+        //Custom dev js
+        paths.dev + 'js/custom/custom-dev.js'
+    ];
+
+    return gulp.src(devscript)
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(concat('custom.js'))
+        .pipe(gulp.dest(paths.jssrc));
+});
+
+
 // JS task
 // Run:
 // gulp js
 gulp.task('js', function() {
-    return gulp.src(paths.jssrc)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+    var scripts = [
+        // Bootstrap and popper combo
+        paths.dev + 'js/vendor/bootstrap4/bootstrap.bundle.js',
+
+        //Underscores js
+        paths.dev + 'js/underscores/skip-link-focus-fix.js',
+
+        //Custom js
+        paths.dev + 'js/custom/custom.js',
+    ];
+
+    var process =
+    gulp.src(scripts)
         .pipe(concat(paths.jsname))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.js))
+        .pipe(gulp.dest(paths.js));
+
+    gulp.src(scripts)
+        .pipe(concat(paths.jsname) )
+        .pipe(gulp.dest(paths.js) );
+
+    return process;
 });
 
 // Copy assets from node_modules to theme src/js, /scss and /fonts folder

@@ -8,8 +8,8 @@
   ],
   "paths" : {
     "js": "./js",
-      "jssrc": "./src/js/custom/*.js",
-      "jsname": "app.js",
+      "jssrc": "./src/js/custom/",
+      "jsname": "theme.js",
     "css": "./css",
     "img": "./img",
 		"imgsrc": "./src/img",
