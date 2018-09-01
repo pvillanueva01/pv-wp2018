@@ -1,0 +1,23 @@
+{
+  "browserSyncOptions" : {
+    "proxy": "http://pv-wp2018/",
+    "notify": false
+  },
+  "browserSyncWatchFiles" : [
+    "./**/*.php"
+  ],
+  "paths" : {
+    "js": "./js",
+      "jssrc": "./src/js/custom/",
+      "jsname": "theme.js",
+    "css": "./css",
+    "img": "./img",
+		"imgsrc": "./src/img",
+    "sass": "./sass/",
+    "root": "./",
+    "node": "./node_modules/",
+    "dev": "./src/",
+    "dist": "./bundle",
+    "fonts": "./fonts"
+  }
+}
