@@ -139,7 +139,7 @@ gulp.task( 'clean', function() {
 // Run:
 //gulp duplicate
 gulp.task( 'duplicate', function() {
-    var files = ['**/*',  '!./node_modules', '!./node_modules/**', '!./src', '!./src/**', '!./bundle', '!./bundle/**',  '!./sass', '!./sass/**', '!readme.txt', '!README.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!jshintrc'];
+    var files = ['**/*',  '!./node_modules', '!./node_modules/**', '!./src', '!./src/**', '!./bundle', '!./bundle/**',  '!./sass', '!./sass/**', '!README.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!jshintrc', '!LICENSE'];
 
     return gulp.src(files)
         .pipe(gulp.dest(paths.dist));
