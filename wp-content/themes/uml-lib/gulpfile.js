@@ -33,7 +33,7 @@ var paths = cfg.paths;
 // Run:
 // gulp sass
 gulp.task('sass', function() {
-    return gulp.src( paths.sass + '**/*.scss')
+    return gulp.src( paths.sass + 'style.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
@@ -44,24 +44,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(paths.root));        // Output RTL stylesheets (rtl.css) on theme root
 });
 
-// Check JS custom
-// Run:
-// gulp checkjs
-gulp.task('checkjs', function() {
-    var devscript = [
-        //Custom dev js
-        paths.dev + 'js/custom/custom-dev.js'
-    ];
-
-    return gulp.src(devscript)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('custom.js'))
-        .pipe(gulp.dest(paths.jssrc));
-});
-
-
-// JS task
+// JS Assembly task , check with jshint
 // Run:
 // gulp js
 gulp.task('js', function() {
@@ -78,6 +61,8 @@ gulp.task('js', function() {
 
     var process =
     gulp.src(scripts)
+        //.pipe(jshint())
+        //.pipe(jshint.reporter('default'))
         .pipe(concat(paths.jsname))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())

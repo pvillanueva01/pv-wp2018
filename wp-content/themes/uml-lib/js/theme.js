@@ -6493,9 +6493,8 @@
 } )();
 
 /**
- * File test .js.
- *
+ * File custom.js.
  */
-$( function(){
-    console.log("hello");
-});
+( function(){
+    console.log("hello patty v");
+})();

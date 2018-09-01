@@ -68,7 +68,7 @@ npm install --save-dev gulp@4.0.0
 * to concatenate files: npm install gulp-concat --save-dev
 * to validate js: npm install jshint gulp-jshint --save-dev
 * to minify code: npm install gulp-uglify --save-dev
-* add js task to gulpfile.js to read/conc js files in src/js/custom
+* add js task to gulpfile.js to read/conc js files in src/js/
 * create a .jshintrc configuration file in the theme root for js hint options
 
 Reference for issues with gulp v4 new syntax:
@@ -86,8 +86,8 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 * npm install popper.js --save-dev
 
 #### Enhancements
-* Gulp copy assets task: to move needed libraries from node_modules to project root src directory
-https://understrap.github.io/
+* Gulp copy assets task: to move needed libraries from node_modules to project root src directory: <https://understrap.github.io/>
+* gulp copy-assets
 
 ### Install dependencies after initial setup/cloning
 * npm install
