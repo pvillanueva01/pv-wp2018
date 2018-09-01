@@ -56,7 +56,7 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
     browserSync.init({
         files: ['./**/*.php'],
-        proxy: 'http://localhost/uml-wp-test/',
+        proxy: 'http://pv-wp2018/',
     });
 
     gulp.watch('./sass/**/*.scss', gulp.parallel('sass'))

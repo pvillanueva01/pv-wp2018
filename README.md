@@ -19,7 +19,7 @@ General WP Theme Development | WP Files Misc Testing
 * Node 8.11.4 (https://nodejs.org/) | node -v
 * Yarn 1.5.1 (https://yarnpkg.com/lang/en/docs/install/) | yarn --version
 * Browser Sync 2.24.7 (https://browsersync.io/) | browser-sync -v | npm install -g browser-sync
-* Gulp 4.0.0 
+* Gulp 4.0.0 npm install -g gulp-cli | gulp -v
 
 ### Starter theme
 Credit to Underscores or _s <https://github.com/Automattic/_s >
@@ -45,8 +45,8 @@ rm /usr/local/share/man/man1/gulp.1
 * go to theme directory to create a package.json file, run: npm init
 * install Gulp as a development dependency, node_modules is created, run: 
 
-- remove older versions:
-npm uninstall gulp --save-dev
+remove older versions if you need to: npm uninstall gulp --save-dev
+
 npm install 'gulpjs/gulp.git#4.0' --save-dev
 
 * add es6-promise polyfill, run:  npm install es6-promise --save-dev
@@ -85,6 +85,7 @@ https://understrap.github.io/
 
 ### Install dependencies after initial setup/cloning
 * npm install
+* change path for browser sync in gulpfile.js
 * gulp copy-assets
 
 ### Commands to run gulp to compile sass/js
