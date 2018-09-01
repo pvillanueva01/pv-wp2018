@@ -13,7 +13,7 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
+//var reload = browserSync.reload;
 
 var onError = function (err) {
     console.log('An error occurred:', gutil.colors.magenta(err.message));
@@ -25,46 +25,50 @@ var autoprefixerOptions = {
     browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
 
+// Configuration file to keep your code DRY
+var cfg = require( './gulpconfig.json' );
+var paths = cfg.paths;
+
 // SASS task
+// Run:
+// gulp sass
 gulp.task('sass', function() {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src( paths.sass + '/*.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.root))        // Output (style.css) on theme root
 
         .pipe(rtlcss())                     // Convert to RTL
         .pipe(rename({ basename: 'rtl' }))  // Rename to rtl.css
-        .pipe(gulp.dest('./'));             // Output RTL stylesheets (rtl.css)
+        .pipe(gulp.dest(paths.root));        // Output RTL stylesheets (rtl.css) on theme root
 });
 
 // JS task
+// Run:
+// gulp js
 gulp.task('js', function() {
-    return gulp.src(['./src/js/custom/*.js'])
+    return gulp.src(paths.jssrc)
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
-        .pipe(concat('app.js'))
+        .pipe(concat(paths.jsname))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('./js'))
+        .pipe(gulp.dest(paths.js))
 });
 
-// BrowserSync
-
-
 // Watch
+// Run:
+// gulp watch
 gulp.task('watch', function() {
-    browserSync.init({
-        files: ['./**/*.php'],
-        proxy: 'http://pv-wp2018/',
-    });
+    browserSync.init( cfg.browserSyncWatchFiles, cfg.browserSyncOptions );
 
-    gulp.watch('./sass/**/*.scss', gulp.parallel('sass'))
+    gulp.watch( paths.sass + '/*.scss', gulp.parallel('sass'))
         .on('change', function(path) {
             console.log('Changed: ' + path);
             // code to execute on change
         })
-    gulp.watch('./src/js/custom/*.js', gulp.parallel('js'))
+    gulp.watch(paths.jssrc , gulp.parallel('js'))
         .on('change', function(path) {
             console.log('Changed: ' + path);
             // code to execute on change

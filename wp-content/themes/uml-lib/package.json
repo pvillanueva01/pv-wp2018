@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/pvillanueva01/libweb-wp-test#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "bootstrap": "^4.1.3",
     "browser-sync": "^2.24.7",
     "es6-promise": "^4.2.4",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -35,7 +37,9 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
+    "jquery": "^3.3.1",
     "jshint": "^2.9.6",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "popper.js": "^1.14.4"
   }
 }

@@ -79,13 +79,19 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 #### Browser Sync
 * npm install browser-sync --save-dev
 
+#### Add Bootstrap & Font Awesome
+* npm install jquery --save-dev
+* npm install bootstrap --save-dev
+* npm install @fortawesome/fontawesome-free --save-dev
+* npm install popper.js --save-dev
+
 #### Enhancements
-* Gulp copy assets task: to move needed libraries from node_modules to project root directory
+* Gulp copy assets task: to move needed libraries from node_modules to project root src directory
 https://understrap.github.io/
 
 ### Install dependencies after initial setup/cloning
 * npm install
-* change path for browser sync in gulpfile.js
+* change path for browser sync in gulpconfig.json
 * gulp copy-assets
 
 ### Commands to run gulp to compile sass/js
