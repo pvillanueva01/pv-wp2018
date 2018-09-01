@@ -17,7 +17,7 @@
     "root": "./",
     "node": "./node_modules/",
     "dev": "./src/",
-    "dist": "./dist",
+    "dist": "./bundle",
     "fonts": "./fonts"
   }
 }

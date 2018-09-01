@@ -89,6 +89,12 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 * Gulp copy assets task: to move needed libraries from node_modules to project root src directory: <https://understrap.github.io/>
 * gulp copy-assets
 
+### Bundle as simple theme for distribution/use
+* npm install del --save-dev
+* Create gulp task for bundle/delete: gulp bundle
+
+
+
 ### Install dependencies after initial setup/cloning
 * npm install
 * change path for browser sync in gulpconfig.json

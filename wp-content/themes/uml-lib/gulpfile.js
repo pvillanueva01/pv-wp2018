@@ -11,6 +11,7 @@ var rename  = require('gulp-rename');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+var del = require( 'del' );
 
 var browserSync = require('browser-sync').create();
 //var reload = browserSync.reload;
@@ -108,7 +109,6 @@ gulp.task( 'copy-assets', function() {
     return stream;
 });
 
-
 // Watch
 // Run:
 // gulp watch
@@ -126,6 +126,29 @@ gulp.task('watch', function() {
             // code to execute on change
         })
 });
+
+
+// Delete any file inside the /bundle folder
+// Run:
+// gulp clean
+gulp.task( 'clean', function() {
+    return del( [paths.dist + '/**', '!./bundle'] );
+});
+
+// Duplicate directory contents minus dev files
+// Run:
+//gulp duplicate
+gulp.task( 'duplicate', function() {
+    var files = ['**/*',  '!./node_modules', '!./node_modules/**', '!./src', '!./src/**', '!./bundle', '!./bundle/**',  '!./sass', '!./sass/**', '!readme.txt', '!README.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!jshintrc'];
+
+    return gulp.src(files)
+        .pipe(gulp.dest(paths.dist));
+});
+
+//Bundle as simple theme
+// Run:
+// gulp bundle
+gulp.task('bundle', gulp.parallel('clean', 'duplicate'));
 
 
 // default task
