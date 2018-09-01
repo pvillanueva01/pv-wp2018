@@ -13,13 +13,11 @@
     "css": "./css",
     "img": "./img",
 		"imgsrc": "./src/img",
-    "sass": "./sass/**",
+    "sass": "./sass/",
     "root": "./",
     "node": "./node_modules/",
-    "bower": "./bower_components/",
-    "dev": "./src",
+    "dev": "./src/",
     "dist": "./dist",
-    "distprod": "./dist-product",
     "vendor": ""
   }
 }

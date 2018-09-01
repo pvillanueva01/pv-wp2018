@@ -33,7 +33,7 @@ var paths = cfg.paths;
 // Run:
 // gulp sass
 gulp.task('sass', function() {
-    return gulp.src( paths.sass + '/*.scss')
+    return gulp.src( paths.sass + '**/*.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
@@ -57,13 +57,39 @@ gulp.task('js', function() {
         .pipe(gulp.dest(paths.js))
 });
 
+// Copy assets from node_modules to theme src/js, /scss and /fonts folder
+// Run:
+// gulp copy-assets
+gulp.task( 'copy-assets', function() {
+    var stream =
+
+    // Copy jquery JS Core
+    gulp.src( paths.node + 'jquery/dist/core.js' )
+        .pipe( gulp.dest( paths.dev + 'js/vendor' ) );
+
+    // Copy Popper JS files
+    gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
+        .pipe( gulp.dest( paths.dev + 'js/vendor' ) );
+
+    // Copy Bootstrap JS files
+    gulp.src( paths.node + 'bootstrap/dist/js/**/*.js' )
+        .pipe( gulp.dest( paths.dev + '/js/vendor/bootstrap4' ) );
+
+    // Copy all Bootstrap SCSS files
+    gulp.src( paths.node + 'bootstrap/scss/**/*.scss' )
+        .pipe( gulp.dest( paths.sass + 'bootstrap4' ) );
+
+    return stream;
+});
+
+
 // Watch
 // Run:
 // gulp watch
 gulp.task('watch', function() {
     browserSync.init( cfg.browserSyncWatchFiles, cfg.browserSyncOptions );
 
-    gulp.watch( paths.sass + '/*.scss', gulp.parallel('sass'))
+    gulp.watch( paths.sass + '**/*.scss', gulp.parallel('sass'))
         .on('change', function(path) {
             console.log('Changed: ' + path);
             // code to execute on change
