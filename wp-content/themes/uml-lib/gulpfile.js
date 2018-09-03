@@ -106,6 +106,10 @@ gulp.task( 'copy-assets', function() {
     gulp.src( paths.node + '@fortawesome/fontawesome-free/scss/*.scss' )
         .pipe( gulp.dest( paths.sass + '/fontawesome' ) );
 
+    // Copy Animate CSS
+    gulp.src( paths.node + 'animate.css/animate.min.css' )
+        .pipe( gulp.dest( paths.root + '/css' ) );
+
     return stream;
 });
 

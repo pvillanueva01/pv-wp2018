@@ -85,6 +85,9 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 * npm install @fortawesome/fontawesome-free --save-dev
 * npm install popper.js --save-dev
 
+#### Add Animations Library
+* npm install animate.css --save-dev
+
 #### Enhancements
 * Gulp copy assets task: to move needed libraries from node_modules to project root src directory: <https://understrap.github.io/>
 * gulp copy-assets
@@ -92,7 +95,6 @@ https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 ### Bundle as simple theme for distribution/use
 * npm install del --save-dev
 * Create gulp task for bundle/delete: gulp bundle
-
 
 ### Install dependencies after initial setup/cloning
 * npm install
