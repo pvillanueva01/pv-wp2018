@@ -34,6 +34,8 @@ xmlrpc.php
 # other default themes
 wp-content/themes/twentyfifteen/
 wp-content/themes/twentysixteen/
+wp-content/themes/twentyseventeen/
+wp-content/themes/twentynineteen/
 
 # understrap theme
 wp-content/themes/understrap/node_modules/
