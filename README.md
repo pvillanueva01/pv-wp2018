@@ -2,7 +2,7 @@
 General WP Theme Development | WP Files Misc Testing
 
 ## WP Setup
-* WP version 4.9.8 with classic editor enabled
+* WP version 5.1.1 with classic editor enabled
 
 ### Active plugins
 * Theme Check <https://wordpress.org/plugins/theme-check/>
