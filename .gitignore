@@ -32,6 +32,9 @@ xmlrpc.php
 /readme.html
 
 # other default themes
+wp-content/index.php
+wp-content/resources/
+wp-content/themes/index.php
 wp-content/themes/twentyfifteen/
 wp-content/themes/twentysixteen/
 wp-content/themes/twentyseventeen/
