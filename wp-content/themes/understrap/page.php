@@ -10,9 +10,13 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
@@ -42,13 +46,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			</main><!-- #main -->
 
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-	</div><!-- .row -->
+		</div><!-- .row -->
 
-</div><!-- Container end -->
+	</div><!-- #content -->
 
-</div><!-- Wrapper end -->
+</div><!-- #page-wrapper -->
 
 <?php get_footer(); ?>

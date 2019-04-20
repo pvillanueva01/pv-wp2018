@@ -8,9 +8,14 @@
  * @package understrap
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header();
 
-while ( have_posts() ) : the_post();
+while ( have_posts() ) :
+	the_post();
 	get_template_part( 'loop-templates/content', 'empty' );
 endwhile;
 
