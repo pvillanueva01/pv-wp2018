@@ -53,6 +53,7 @@
     "@babel/core": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^8.0.0"
+    "gulp-postcss": "^8.0.0",
+    "tar": "4.4.2"
   }
 }
