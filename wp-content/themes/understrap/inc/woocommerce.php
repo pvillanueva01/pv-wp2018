@@ -5,9 +5,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
 if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
@@ -139,7 +138,7 @@ if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wc_review_ratings_enabled' ) ) {
+if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	/**
 	 * Check if reviews are enabled.
 	 *
