@@ -25,8 +25,9 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
     "animate.css": "^3.7.0",
+    "axios": "0.18.1",
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "es6-promise": "^4.2.4",
     "gulp": "^4.0.0",
@@ -41,7 +42,10 @@
     "gulp-util": "^3.0.8",
     "jquery": "^3.4.0",
     "jshint": "^2.9.6",
-    "lodash": "^4.17.11",
+    "lodash": "4.17.13",
+    "lodash.merge": "^4.6.2",
+    "lodash.mergewith": "^4.6.2",
+    "lodash.template": "4.5.0",
     "popper.js": "^1.14.7",
     "tar": "4.4.2"
   }

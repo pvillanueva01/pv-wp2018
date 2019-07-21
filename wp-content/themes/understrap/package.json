@@ -1,6 +1,6 @@
 {
   "name": "understrap",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
@@ -27,8 +27,9 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
+    "@babel/preset-env": "^7.4.5",
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.3",
     "del": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
@@ -53,7 +54,6 @@
     "@babel/core": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^8.0.0",
-    "tar": "4.4.2"
+    "gulp-postcss": "^8.0.0"
   }
 }
