@@ -40,7 +40,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "jshint": "^2.9.6",
     "lodash": "4.17.13",
     "lodash.merge": "^4.6.2",
