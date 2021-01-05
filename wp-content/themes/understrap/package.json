@@ -58,7 +58,7 @@
     "lodash": "4.17.13",
     "lodash.mergewith": "^4.6.2",
     "tar": "4.4.2",
-    "axios": "0.18.1",
+    "axios": "0.21.1",
     "fstream": "^1.0.12"
   }
 }
