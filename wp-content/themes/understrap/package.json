@@ -57,7 +57,7 @@
     "gulp-postcss": "^8.0.0",
     "lodash": "4.17.13",
     "lodash.mergewith": "^4.6.2",
-    "tar": "4.4.2",
+    "tar": "4.4.15",
     "axios": "0.18.1",
     "fstream": "^1.0.12"
   }
