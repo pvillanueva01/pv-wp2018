@@ -47,6 +47,6 @@
     "lodash.mergewith": "^4.6.2",
     "lodash.template": "4.5.0",
     "popper.js": "^1.14.7",
-    "tar": "4.4.2"
+    "tar": "4.4.15"
   }
 }
